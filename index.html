@@ -45,16 +45,26 @@
   }
 
   .nav-logo img {
-    height: 36px;
+    height: 48px;
     width: auto;
     display: block;
     border-radius: 6px;
+  }
+
+  .nav-logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    letter-spacing: 0.18em;
+    color: var(--off-white);
+    text-transform: uppercase;
   }
 
   .nav-logo {
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .nav-links {
@@ -77,12 +87,29 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     padding: 8rem 4rem 4rem;
     position: relative;
     overflow: hidden;
+    gap: 4rem;
+  }
+
+  .hero-content { display: flex; flex-direction: column; }
+
+  .hero-image {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   .hero::before {
@@ -449,7 +476,8 @@
   @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
-    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero { padding: 7rem 1.5rem 4rem; grid-template-columns: 1fr; }
+    .hero-image { height: 40vh; }
     .hero-scroll-hint { left: 1.5rem; }
     .divider { padding: 0 1.5rem; }
     .section, .work-section, .process-section { padding: 4rem 1.5rem; }
@@ -473,7 +501,7 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo"><img src="mi_studio_logo.jpg" alt="MI Studio"></a>
+  <a href="#" class="nav-logo"><img src="mi_studio_logo.jpg" alt="MI Studio"><span class="nav-logo-text">MI Studio</span></a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#services">Services</a></li>
@@ -483,10 +511,15 @@
 </nav>
 
 <section class="hero">
-  <p class="hero-eyebrow">Marketplace Creative</p>
-  <h1 class="hero-title">Listing visuals for brands<br><em>that want more.</em></h1>
-  <p class="hero-sub">We create premium Amazon listing imagery that elevates your product above the noise — clean, considered, and built to convert.</p>
-  <a href="#contact" class="hero-cta">Get in touch <span class="arrow">→</span></a>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Marketplace Creative</p>
+    <h1 class="hero-title">Listing visuals for brands<br><em>that want more.</em></h1>
+    <p class="hero-sub">We create premium Amazon listing imagery that elevates your product above the noise — clean, considered, and built to convert.</p>
+    <a href="#contact" class="hero-cta">Get in touch <span class="arrow">→</span></a>
+  </div>
+  <div class="hero-image">
+    <img src="concept_image_1.png" alt="MI Studio work">
+  </div>
   <div class="hero-scroll-hint">
     <span class="scroll-line"></span>
     <span>Scroll to explore</span>
