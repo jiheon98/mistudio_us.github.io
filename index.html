@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MI Studio — Marketplace Creative</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Outfit:wght@100;200;300;400;500&family=Josefin+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -23,7 +23,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     background: var(--off-white);
     color: var(--ink);
@@ -52,10 +52,10 @@
   }
 
   .nav-logo-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 1.3rem;
-    letter-spacing: 0.18em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
     color: var(--off-white);
     text-transform: uppercase;
   }
@@ -101,7 +101,17 @@
   .hero-image {
     position: relative;
     height: 70vh;
-    overflow: hidden;
+  }
+
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    bottom: 16px;
+    left: 16px;
+    border: 1px solid var(--gold);
+    z-index: 0;
   }
 
   .hero-image img {
@@ -110,6 +120,8 @@
     object-fit: cover;
     object-position: center;
     display: block;
+    position: relative;
+    z-index: 1;
   }
 
   .hero::before {
