@@ -39,18 +39,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 4rem;
-    background: rgba(250,250,248,0.90);
+    background: rgba(26,26,24,0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+    border-radius: 6px;
   }
 
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 1.4rem;
-    letter-spacing: 0.15em;
-    color: var(--ink);
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
   .nav-links {
@@ -63,12 +67,12 @@
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--ink-soft);
+    color: rgba(250,250,248,0.6);
     text-decoration: none;
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover { color: rgba(250,250,248,1); }
 
   /* HERO */
   .hero {
@@ -412,13 +416,16 @@
     background: var(--off-white);
   }
 
+  .footer-logo img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+
   .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    color: var(--ink);
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
   .footer-ig {
@@ -466,7 +473,7 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">MI Studio</a>
+  <a href="#" class="nav-logo"><img src="mi_studio_logo.jpg" alt="MI Studio"></a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#services">Services</a></li>
@@ -571,7 +578,7 @@
 </section>
 
 <footer>
-  <a href="#" class="footer-logo">MI Studio</a>
+  <a href="#" class="footer-logo"><img src="mi_studio_logo.jpg" alt="MI Studio"></a>
   <a href="https://instagram.com/mistudio_us" target="_blank" class="footer-ig">@mistudio_us</a>
   <p class="footer-copy">© 2026 MI Studio</p>
 </footer>
